@@ -12,7 +12,7 @@ public class Main {
 
     private static void runDemo() {
         int passed = 0;
-        int total = 5;
+        int total = 7;
 
         Circle c1 = new Circle("C-01", 2, new VectorRenderer());
         String res1 = c1.execute();
@@ -78,6 +78,26 @@ public class Main {
         } else {
             System.out.println("T5 FAIL | sameObject=" + sameObject + " | stateUnchanged=" + stateUnchanged);
             System.out.println(" before=" + beforeResult + " | after=" + afterResult);
+        }
+
+        Circle c6 = new Circle("C-06", 2, new AsciiRenderer());
+        String res6 = c6.execute();
+        String exp6 = "ASCII circle radius=2";
+        if (Objects.equals(res6, exp6)) {
+            System.out.println("T6 PASS | Circle + AsciiRenderer | result=" + res6);
+            passed++;
+        } else {
+            System.out.println("T6 FAIL | Circle + AsciiRenderer | expected=" + exp6 + " | actual=" + res6);
+        }
+
+        Square s7 = new Square("S-07", 3, new AsciiRenderer());
+        String res7 = s7.execute();
+        String exp7 = "ASCII square side=3";
+        if (Objects.equals(res7, exp7)) {
+            System.out.println("T7 PASS | Square + AsciiRenderer | result=" + res7);
+            passed++;
+        } else {
+            System.out.println("T7 FAIL | Square + AsciiRenderer | expected=" + exp7 + " | actual=" + res7);
         }
 
         System.out.println("SUMMARY: " + passed + "/" + total + " PASS");
