@@ -1,0 +1,343 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 4 0 R 5 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 6 0 R /Resources << /Font << /F1 9 0 R /F2 10 0 R /F3 11 0 R /F4 12 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 7 0 R /Resources << /Font << /F1 9 0 R /F2 10 0 R /F3 11 0 R /F4 12 0 R >> >> >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 8 0 R /Resources << /Font << /F1 9 0 R /F2 10 0 R /F3 11 0 R /F4 12 0 R >> >> >>
+endobj
+6 0 obj
+<< /Length 9289 >>
+stream
+q 0.150 0.350 0.650 rg 40.00 800.00 515.28 1.50 re f Q
+q 0.700 0.700 0.700 rg 40.00 45.00 515.28 0.80 re f Q
+BT /F1 9 Tf 0.400 0.400 0.400 rg 40.00 810.00 Td (Astana IT University | School of Software Engineering) Tj ET
+BT /F2 18 Tf 0.100 0.220 0.480 rg 40.00 775.00 Td (Assignment 3: Bridge Pattern Implementation Report) Tj ET
+BT /F1 9.5 Tf 0.300 0.350 0.450 rg 40.00 758.00 Td (Course: ShP-2216 Software Design Patterns | Trimester 4 | Instructor: Yerassyl Bekenov) Tj ET
+q 0.750 0.820 0.920 RG 1.00 w 0.950 0.970 1.000 rg 40.00 680.00 515.00 66.00 re B Q
+BT /F2 9.5 Tf 0.200 0.250 0.350 rg 52.00 730.00 Td (Student Name:) Tj ET
+BT /F1 9.5 Tf 0.100 0.100 0.100 rg 130.00 730.00 Td (Alibi Maksut) Tj ET
+BT /F2 9.5 Tf 0.200 0.250 0.350 rg 260.00 730.00 Td (Group:) Tj ET
+BT /F1 9.5 Tf 0.100 0.100 0.100 rg 300.00 730.00 Td (SE-2301) Tj ET
+BT /F2 9.5 Tf 0.200 0.250 0.350 rg 390.00 730.00 Td (Topic:) Tj ET
+BT /F1 9.5 Tf 0.100 0.100 0.100 rg 425.00 730.00 Td (Option A \(Drawing\)) Tj ET
+BT /F2 9.5 Tf 0.200 0.250 0.350 rg 52.00 712.00 Td (Repository:) Tj ET
+BT /F3 8.8 Tf 0.100 0.300 0.600 rg 130.00 712.00 Td (https://github.com/M1ska2021/Assignment3_Bridge) Tj ET
+BT /F2 9.5 Tf 0.200 0.250 0.350 rg 52.00 694.00 Td (Base Commit:) Tj ET
+BT /F3 8.5 Tf 0.200 0.200 0.200 rg 130.00 694.00 Td (11ef76c1044c3b38667c3770c4925581593c8f98) Tj ET
+BT /F2 9.5 Tf 0.200 0.250 0.350 rg 360.00 694.00 Td (Status:) Tj ET
+BT /F2 9 Tf 0.100 0.550 0.200 rg 405.00 694.00 Td (All Checks Passed \(7/7\)) Tj ET
+q 0.800 0.850 0.920 RG 0.80 w 0.920 0.940 0.980 rg 40.00 641.00 515.00 20.00 re B Q
+q 0.150 0.350 0.650 rg 40.00 641.00 4.00 20.00 re f Q
+BT /F2 11 Tf 0.100 0.200 0.450 rg 50.00 647.00 Td (1. Architectural Problem & Two Independent Dimensions) Tj ET
+BT /F1 8.5 Tf 0.150 0.150 0.150 rg 45.00 620.00 Td (In object-oriented software design, class hierarchies often need to support multiple orthogonal dimensions of variation.) Tj ET
+BT /F1 8.5 Tf 0.150 0.150 0.150 rg 45.00 608.00 Td (In this assignment \(Topic A: Drawing\), our system incorporates two completely independent axes of change:) Tj ET
+BT /F2 8.5 Tf 0.100 0.200 0.400 rg 45.00 596.00 Td (  1. Domain Abstraction Dimension: Geometric shapes with domain-specific properties \(Circle with radius, Square with side\).) Tj ET
+BT /F2 8.5 Tf 0.100 0.200 0.400 rg 45.00 584.00 Td (  2. Low-level Implementor Dimension: Rendering platforms / formats \(VectorRenderer, RasterRenderer, and AsciiRenderer\).) Tj ET
+BT /F1 8.5 Tf 0.150 0.150 0.150 rg 45.00 572.00 Td () Tj ET
+BT /F2 8.5 Tf 0.100 0.200 0.400 rg 45.00 560.00 Td (The Subclass Explosion Problem \(Cartesian Product\): If inheritance were used to combine these two dimensions, supporting) Tj ET
+BT /F1 8.5 Tf 0.150 0.150 0.150 rg 45.00 548.00 Td (M shapes across N renderers would require M x N concrete subclasses \(e.g., VectorCircle, RasterCircle, AsciiCircle, VectorSquare,) Tj ET
+BT /F1 8.5 Tf 0.150 0.150 0.150 rg 45.00 536.00 Td (RasterSquare, AsciiSquare\). Introducing a 4th renderer would require modifying or adding classes across all shapes.) Tj ET
+BT /F1 8.5 Tf 0.150 0.150 0.150 rg 45.00 524.00 Td () Tj ET
+BT /F2 8.5 Tf 0.100 0.200 0.400 rg 45.00 512.00 Td (Bridge Pattern Solution: Bridge decouples the abstraction hierarchy from its implementation hierarchy by replacing direct) Tj ET
+BT /F1 8.5 Tf 0.150 0.150 0.150 rg 45.00 500.00 Td (inheritance with object composition. The abstract Shape class maintains an interface-typed reference to Renderer. This reduces the) Tj ET
+BT /F1 8.5 Tf 0.150 0.150 0.150 rg 45.00 488.00 Td (required number of classes from M x N to M + N \(2 + 3 = 5\), allowing shapes and renderers to vary, scale, and be tested independently.) Tj ET
+q 0.800 0.850 0.920 RG 0.80 w 0.920 0.940 0.980 rg 40.00 461.00 515.00 20.00 re B Q
+q 0.150 0.350 0.650 rg 40.00 461.00 4.00 20.00 re f Q
+BT /F2 11 Tf 0.100 0.200 0.450 rg 50.00 467.00 Td (2. UML Class Diagram) Tj ET
+q 0.800 0.850 0.920 RG 1.00 w 0.990 0.990 1.000 rg 40.00 95.00 515.00 350.00 re B Q
+q 0.200 0.350 0.600 RG 1.20 w 1.000 1.000 1.000 rg 55.00 340.00 185.00 90.00 re B Q
+q 0.200 0.350 0.600 RG 1.20 w 0.880 0.920 0.980 rg 55.00 405.00 185.00 25.00 re B Q
+BT /F1 7.5 Tf 0.300 0.300 0.300 rg 95.00 417.00 Td (<<abstract>>) Tj ET
+BT /F2 9.5 Tf 0.100 0.200 0.450 rg 118.00 408.00 Td (Shape) Tj ET
+BT /F3 7.8 Tf 0.000 0.000 0.000 rg 60.00 393.00 Td (# id: String) Tj ET
+BT /F3 7.8 Tf 0.000 0.000 0.000 rg 60.00 381.00 Td (# renderer: Renderer) Tj ET
+q 0.800 0.800 0.800 RG 1.00 w 55.00 375.00 m 240.00 375.00 l S Q
+BT /F3 7.8 Tf 0.000 0.000 0.000 rg 60.00 363.00 Td (+ execute\(\): String) Tj ET
+BT /F3 7.3 Tf 0.000 0.000 0.000 rg 60.00 350.00 Td (+ setImplementation\(r: Renderer\): void) Tj ET
+q 0.150 0.350 0.650 RG 1.50 w 240.00 385.00 m 340.00 385.00 l S Q
+q 0.150 0.350 0.650 RG 1.50 w 330.00 389.00 m 340.00 385.00 l S Q
+q 0.150 0.350 0.650 RG 1.50 w 330.00 381.00 m 340.00 385.00 l S Q
+q 0.150 0.350 0.650 RG 1.20 w 240.00 385.00 m 246.00 389.00 l S Q
+q 0.150 0.350 0.650 RG 1.20 w 246.00 389.00 m 252.00 385.00 l S Q
+q 0.150 0.350 0.650 RG 1.20 w 252.00 385.00 m 246.00 381.00 l S Q
+q 0.150 0.350 0.650 RG 1.20 w 246.00 381.00 m 240.00 385.00 l S Q
+BT /F2 7.8 Tf 0.150 0.350 0.650 rg 256.00 390.00 Td (renderer) Tj ET
+q 0.200 0.500 0.350 RG 1.20 w 1.000 1.000 1.000 rg 340.00 340.00 195.00 90.00 re B Q
+q 0.200 0.500 0.350 RG 1.20 w 0.880 0.950 0.900 rg 340.00 405.00 195.00 25.00 re B Q
+BT /F1 7.5 Tf 0.300 0.300 0.300 rg 395.00 417.00 Td (<<interface>>) Tj ET
+BT /F2 9.5 Tf 0.100 0.350 0.200 rg 412.00 408.00 Td (Renderer) Tj ET
+BT /F3 7.5 Tf 0.000 0.000 0.000 rg 345.00 387.00 Td (+ renderCircle\(radius: double\): String) Tj ET
+q 0.800 0.800 0.800 RG 1.00 w 340.00 375.00 m 535.00 375.00 l S Q
+BT /F3 7.5 Tf 0.000 0.000 0.000 rg 345.00 360.00 Td (+ renderSquare\(side: double\): String) Tj ET
+q 0.300 0.400 0.600 RG 1.00 w 1.000 1.000 1.000 rg 55.00 215.00 88.00 70.00 re B Q
+q 0.300 0.400 0.600 RG 1.00 w 0.930 0.950 0.980 rg 55.00 265.00 88.00 20.00 re B Q
+BT /F2 9 Tf 0.150 0.200 0.400 rg 85.00 271.00 Td (Circle) Tj ET
+BT /F3 7.2 Tf 0.000 0.000 0.000 rg 58.00 250.00 Td (- radius: double) Tj ET
+q 0.800 0.800 0.800 RG 1.00 w 55.00 244.00 m 143.00 244.00 l S Q
+BT /F3 7.2 Tf 0.000 0.000 0.000 rg 58.00 230.00 Td (+ execute\(\): String) Tj ET
+q 0.300 0.400 0.600 RG 1.00 w 1.000 1.000 1.000 rg 152.00 215.00 88.00 70.00 re B Q
+q 0.300 0.400 0.600 RG 1.00 w 0.930 0.950 0.980 rg 152.00 265.00 88.00 20.00 re B Q
+BT /F2 9 Tf 0.150 0.200 0.400 rg 180.00 271.00 Td (Square) Tj ET
+BT /F3 7.2 Tf 0.000 0.000 0.000 rg 155.00 250.00 Td (- side: double) Tj ET
+q 0.800 0.800 0.800 RG 1.00 w 152.00 244.00 m 240.00 244.00 l S Q
+BT /F3 7.2 Tf 0.000 0.000 0.000 rg 155.00 230.00 Td (+ execute\(\): String) Tj ET
+q 0.400 0.400 0.400 RG 1.00 w 99.00 285.00 m 99.00 340.00 l S Q
+q 0.400 0.400 0.400 RG 1.00 w 196.00 285.00 m 196.00 315.00 l S Q
+q 0.400 0.400 0.400 RG 1.00 w 196.00 315.00 m 147.00 315.00 l S Q
+q 0.400 0.400 0.400 RG 1.00 w 147.00 315.00 m 147.00 340.00 l S Q
+q 0.300 0.500 0.300 RG 1.00 w 1.000 1.000 1.000 rg 280.00 215.00 80.00 70.00 re B Q
+q 0.300 0.500 0.300 RG 1.00 w 0.920 0.960 0.920 rg 280.00 265.00 80.00 20.00 re B Q
+BT /F2 7.5 Tf 0.100 0.350 0.150 rg 287.00 271.00 Td (VectorRenderer) Tj ET
+BT /F3 6.8 Tf 0.000 0.000 0.000 rg 283.00 247.00 Td (+ renderCircle\(\)) Tj ET
+BT /F3 6.8 Tf 0.000 0.000 0.000 rg 283.00 232.00 Td (+ renderSquare\(\)) Tj ET
+q 0.300 0.500 0.300 RG 1.00 w 1.000 1.000 1.000 rg 368.00 215.00 80.00 70.00 re B Q
+q 0.300 0.500 0.300 RG 1.00 w 0.920 0.960 0.920 rg 368.00 265.00 80.00 20.00 re B Q
+BT /F2 7.5 Tf 0.100 0.350 0.150 rg 375.00 271.00 Td (RasterRenderer) Tj ET
+BT /F3 6.8 Tf 0.000 0.000 0.000 rg 371.00 247.00 Td (+ renderCircle\(\)) Tj ET
+BT /F3 6.8 Tf 0.000 0.000 0.000 rg 371.00 232.00 Td (+ renderSquare\(\)) Tj ET
+q 0.700 0.500 0.100 RG 1.20 w 1.000 0.980 0.920 rg 456.00 215.00 88.00 70.00 re B Q
+q 0.700 0.500 0.100 RG 1.20 w 1.000 0.940 0.820 rg 456.00 265.00 88.00 20.00 re B Q
+BT /F2 7.5 Tf 0.500 0.300 0.000 rg 462.00 271.00 Td (AsciiRenderer [I3]) Tj ET
+BT /F3 6.8 Tf 0.000 0.000 0.000 rg 459.00 247.00 Td (+ renderCircle\(\)) Tj ET
+BT /F3 6.8 Tf 0.000 0.000 0.000 rg 459.00 232.00 Td (+ renderSquare\(\)) Tj ET
+q 0.400 0.400 0.400 RG 1.00 w [3 3] 0 d 320.00 285.00 m 320.00 315.00 l S Q
+q 0.400 0.400 0.400 RG 1.00 w [3 3] 0 d 408.00 285.00 m 408.00 340.00 l S Q
+q 0.400 0.400 0.400 RG 1.00 w [3 3] 0 d 500.00 285.00 m 500.00 315.00 l S Q
+q 0.400 0.400 0.400 RG 1.00 w [3 3] 0 d 320.00 315.00 m 500.00 315.00 l S Q
+q 0.500 0.300 0.600 RG 1.00 w 1.000 1.000 1.000 rg 55.00 110.00 185.00 55.00 re B Q
+q 0.500 0.300 0.600 RG 1.00 w 0.950 0.920 0.970 rg 55.00 145.00 185.00 20.00 re B Q
+BT /F2 9 Tf 0.300 0.150 0.400 rg 115.00 151.00 Td (Main \(Client\)) Tj ET
+BT /F3 7.5 Tf 0.000 0.000 0.000 rg 60.00 132.00 Td (+ main\(args: String[]\): void) Tj ET
+BT /F3 7.5 Tf 0.000 0.000 0.000 rg 60.00 118.00 Td (+ runDemo\(\): void \(T1-T7 checks\)) Tj ET
+q 0.500 0.300 0.600 RG 1.00 w [3 3] 0 d 147.00 165.00 m 147.00 215.00 l S Q
+BT /F1 7 Tf 0.400 0.200 0.500 rg 152.00 185.00 Td (<<instantiates & executes>>) Tj ET
+BT /F1 8.5 Tf 0.400 0.400 0.400 rg 40.00 32.00 Td (Astana IT University | ShP-2216 Software Design Patterns | Page 1 of 3) Tj ET
+BT /F1 8.5 Tf 0.400 0.400 0.400 rg 450.00 32.00 Td (Alibi Maksut \(SE-2301\)) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Length 9060 >>
+stream
+q 0.150 0.350 0.650 rg 40.00 800.00 515.28 1.50 re f Q
+q 0.700 0.700 0.700 rg 40.00 45.00 515.28 0.80 re f Q
+q 0.800 0.850 0.920 RG 0.80 w 0.920 0.940 0.980 rg 40.00 806.00 515.00 20.00 re B Q
+q 0.150 0.350 0.650 rg 40.00 806.00 4.00 20.00 re f Q
+BT /F2 11 Tf 0.100 0.200 0.450 rg 50.00 812.00 Td (3. Five Clean Code Principles with Annotated Excerpts) Tj ET
+q 0.800 0.820 0.860 RG 0.80 w 0.970 0.980 0.990 rg 40.00 690.00 250.00 95.00 re B Q
+q 0.800 0.820 0.860 RG 0.80 w 0.910 0.930 0.960 rg 40.00 769.00 250.00 16.00 re B Q
+BT /F2 8.5 Tf 0.200 0.250 0.350 rg 48.00 773.00 Td (Excerpt 1: Separation of Responsibilities \(SRP\)) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 757.00 Td (public class Circle extends Shape {) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 746.50 Td (    private final double radius;) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 736.00 Td (    @Override) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 725.50 Td (    public String execute\(\) {) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 715.00 Td (        return renderer.renderCircle\(radius\);) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 704.50 Td (    }) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 694.00 Td (}) Tj ET
+BT /F2 8.2 Tf 0.150 0.150 0.200 rg 300.00 765.00 Td (Principle: Single Responsibility Principle \(SRP\).) Tj ET
+BT /F1 8.2 Tf 0.150 0.150 0.200 rg 300.00 753.00 Td (Analysis: Circle only encapsulates geometric domain state) Tj ET
+BT /F1 8.2 Tf 0.150 0.150 0.200 rg 300.00 741.00 Td (\(radius\) and delegates visual representation to Renderer.) Tj ET
+BT /F1 8.2 Tf 0.150 0.150 0.200 rg 300.00 729.00 Td (Conversely, VectorRenderer only handles string formatting.) Tj ET
+BT /F2 8.2 Tf 0.150 0.150 0.200 rg 300.00 717.00 Td (Benefit: High cohesion. Changes to rendering syntax or) Tj ET
+BT /F1 8.2 Tf 0.150 0.150 0.200 rg 300.00 705.00 Td (output formats never compromise core shape business logic.) Tj ET
+q 0.800 0.820 0.860 RG 0.80 w 0.970 0.980 0.990 rg 40.00 575.00 250.00 95.00 re B Q
+q 0.800 0.820 0.860 RG 0.80 w 0.910 0.930 0.960 rg 40.00 654.00 250.00 16.00 re B Q
+BT /F2 8.5 Tf 0.200 0.250 0.350 rg 48.00 658.00 Td (Excerpt 2: Meaningful Names \(Intention-Revealing\)) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 642.00 Td (boolean sameObject = \(refBefore == refAfter\);) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 631.50 Td (boolean stateUnchanged = Objects.equals\() Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 621.00 Td (    idBefore, idAfter\) &&) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 610.50 Td (    \(dataBefore == dataAfter\);) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 600.00 Td (boolean beforeMatch = "VECTOR circle radius=2") Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 589.50 Td (    .equals\(beforeResult\);) Tj ET
+BT /F2 8.2 Tf 0.150 0.150 0.200 rg 300.00 650.00 Td (Principle: Intention-Revealing & Meaningful Names.) Tj ET
+BT /F1 8.2 Tf 0.150 0.150 0.200 rg 300.00 638.00 Td (Analysis: Variable names sameObject and stateUnchanged) Tj ET
+BT /F1 8.2 Tf 0.150 0.150 0.200 rg 300.00 626.00 Td (instantly communicate the verification contract of T5.) Tj ET
+BT /F1 8.2 Tf 0.150 0.150 0.200 rg 300.00 614.00 Td (Method names renderCircle and setImplementation leave no) Tj ET
+BT /F1 8.2 Tf 0.150 0.150 0.200 rg 300.00 602.00 Td (ambiguity regarding their purpose.) Tj ET
+BT /F2 8.2 Tf 0.150 0.150 0.200 rg 300.00 590.00 Td (Benefit: Minimizes cognitive overhead. Code is self-documenting.) Tj ET
+q 0.800 0.820 0.860 RG 0.80 w 0.970 0.980 0.990 rg 40.00 460.00 250.00 95.00 re B Q
+q 0.800 0.820 0.860 RG 0.80 w 0.910 0.930 0.960 rg 40.00 539.00 250.00 16.00 re B Q
+BT /F2 8.5 Tf 0.200 0.250 0.350 rg 48.00 543.00 Td (Excerpt 3: Small Focused Methods \(Do One Thing\)) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 527.00 Td (private String format\(double value\) {) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 516.50 Td (    if \(value == \(long\) value\) {) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 506.00 Td (        return String.valueOf\(\(long\) value\);) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 495.50 Td (    }) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 485.00 Td (    return String.valueOf\(value\);) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 474.50 Td (}) Tj ET
+BT /F2 8.2 Tf 0.150 0.150 0.200 rg 300.00 535.00 Td (Principle: Small, Single-Purpose Methods.) Tj ET
+BT /F1 8.2 Tf 0.150 0.150 0.200 rg 300.00 523.00 Td (Analysis: The helper format\(\) method does exactly one thing:) Tj ET
+BT /F1 8.2 Tf 0.150 0.150 0.200 rg 300.00 511.00 Td (cleanly renders integers without trailing .0 decimals while) Tj ET
+BT /F1 8.2 Tf 0.150 0.150 0.200 rg 300.00 499.00 Td (preserving floating-point values when present.) Tj ET
+BT /F2 8.2 Tf 0.150 0.150 0.200 rg 300.00 487.00 Td (Benefit: Trivial to unit test, debug, and reuse without) Tj ET
+BT /F1 8.2 Tf 0.150 0.150 0.200 rg 300.00 475.00 Td (contaminating high-level rendering orchestration.) Tj ET
+q 0.800 0.820 0.860 RG 0.80 w 0.970 0.980 0.990 rg 40.00 345.00 250.00 95.00 re B Q
+q 0.800 0.820 0.860 RG 0.80 w 0.910 0.930 0.960 rg 40.00 424.00 250.00 16.00 re B Q
+BT /F2 8.5 Tf 0.200 0.250 0.350 rg 48.00 428.00 Td (Excerpt 4: Avoidance of Duplication \(DRY\)) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 412.00 Td (public abstract class Shape {) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 401.50 Td (    protected final String id;) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 391.00 Td (    protected Renderer renderer;) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 380.50 Td (    public void setImplementation\(Renderer r\) {) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 370.00 Td (        this.renderer = Objects.requireNonNull\(r\);) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 359.50 Td (    }) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 349.00 Td (}) Tj ET
+BT /F2 8.2 Tf 0.150 0.150 0.200 rg 300.00 420.00 Td (Principle: Don't Repeat Yourself \(DRY\).) Tj ET
+BT /F1 8.2 Tf 0.150 0.150 0.200 rg 300.00 408.00 Td (Analysis: Bridge storage, constructor validation, and runtime) Tj ET
+BT /F1 8.2 Tf 0.150 0.150 0.200 rg 300.00 396.00 Td (implementation switching are consolidated in the Shape base.) Tj ET
+BT /F1 8.2 Tf 0.150 0.150 0.200 rg 300.00 384.00 Td (Subclasses Circle and Square inherit this mechanism cleanly.) Tj ET
+BT /F2 8.2 Tf 0.150 0.150 0.200 rg 300.00 372.00 Td (Benefit: Eliminates duplicated bridge management code across) Tj ET
+BT /F1 8.2 Tf 0.150 0.150 0.200 rg 300.00 360.00 Td (present and future shape abstractions.) Tj ET
+q 0.800 0.820 0.860 RG 0.80 w 0.970 0.980 0.990 rg 40.00 230.00 250.00 95.00 re B Q
+q 0.800 0.820 0.860 RG 0.80 w 0.910 0.930 0.960 rg 40.00 309.00 250.00 16.00 re B Q
+BT /F2 8.5 Tf 0.200 0.250 0.350 rg 48.00 313.00 Td (Excerpt 5: Encapsulation of State) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 297.00 Td (protected final String id;) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 286.50 Td (private final double radius;) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 276.00 Td (public void setImplementation\(Renderer renderer\) {) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 265.50 Td (    this.renderer = Objects.requireNonNull\(renderer,) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 255.00 Td (        "renderer must not be null"\);) Tj ET
+BT /F3 7.8 Tf 0.150 0.150 0.200 rg 48.00 244.50 Td (}) Tj ET
+BT /F2 8.2 Tf 0.150 0.150 0.200 rg 300.00 305.00 Td (Principle: Robust State Encapsulation.) Tj ET
+BT /F1 8.2 Tf 0.150 0.150 0.200 rg 300.00 293.00 Td (Analysis: Identity \(id\) and geometric dimensions \(radius, side\)) Tj ET
+BT /F1 8.2 Tf 0.150 0.150 0.200 rg 300.00 281.00 Td (are declared immutable \(final\). The implementor reference is) Tj ET
+BT /F1 8.2 Tf 0.150 0.150 0.200 rg 300.00 269.00 Td (protected and mutated only through a validated method.) Tj ET
+BT /F2 8.2 Tf 0.150 0.150 0.200 rg 300.00 257.00 Td (Benefit: Invariants are preserved throughout runtime switching,) Tj ET
+BT /F1 8.2 Tf 0.150 0.150 0.200 rg 300.00 245.00 Td (preventing null pointer exceptions and state corruption.) Tj ET
+q 0.800 0.850 0.920 RG 1.00 w 0.960 0.980 1.000 rg 40.00 65.00 515.00 140.00 re B Q
+BT /F2 10.5 Tf 0.100 0.250 0.500 rg 52.00 185.00 Td (Summary of Clean Code Architecture) Tj ET
+BT /F1 8.5 Tf 0.200 0.200 0.200 rg 52.00 165.00 Td (- No concrete implementor references exist anywhere in Shape, Circle, or Square.) Tj ET
+BT /F1 8.5 Tf 0.200 0.200 0.200 rg 52.00 150.00 Td (- Abstractions interact with renderers strictly through the polymorphism of the Renderer interface.) Tj ET
+BT /F1 8.5 Tf 0.200 0.200 0.200 rg 52.00 135.00 Td (- Zero type checks \(instanceof\) or casting operations are used, guaranteeing strict compliance with OOP principles.) Tj ET
+BT /F1 8.5 Tf 0.200 0.200 0.200 rg 52.00 120.00 Td (- Every class is focused, readable, and under 35 lines of code, making maintenance effortless.) Tj ET
+BT /F1 8.5 Tf 0.400 0.400 0.400 rg 40.00 32.00 Td (Astana IT University | ShP-2216 Software Design Patterns | Page 2 of 3) Tj ET
+BT /F1 8.5 Tf 0.400 0.400 0.400 rg 450.00 32.00 Td (Alibi Maksut \(SE-2301\)) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Length 8627 >>
+stream
+q 0.150 0.350 0.650 rg 40.00 800.00 515.28 1.50 re f Q
+q 0.700 0.700 0.700 rg 40.00 45.00 515.28 0.80 re f Q
+q 0.800 0.850 0.920 RG 0.80 w 0.920 0.940 0.980 rg 40.00 806.00 515.00 20.00 re B Q
+q 0.150 0.350 0.650 rg 40.00 806.00 4.00 20.00 re f Q
+BT /F2 11 Tf 0.100 0.200 0.450 rg 50.00 812.00 Td (4. Independent Extension \(I3\) & Runtime Switching) Tj ET
+BT /F2 8.5 Tf 0.100 0.200 0.450 rg 45.00 785.00 Td (Addition of AsciiRenderer \(I3\):) Tj ET
+BT /F1 8.5 Tf 0.150 0.150 0.150 rg 45.00 773.50 Td (To satisfy the Open/Closed Principle \(OCP\), a third concrete implementor \(AsciiRenderer\) was introduced after the base commit) Tj ET
+BT /F1 8.5 Tf 0.150 0.150 0.150 rg 45.00 762.00 Td (\(ea12080\). AsciiRenderer implements the existing Renderer interface without requiring any modification to the abstraction) Tj ET
+BT /F1 8.5 Tf 0.150 0.150 0.150 rg 45.00 750.50 Td (hierarchy \(Shape, Circle, Square\) or the existing implementors \(VectorRenderer, RasterRenderer\).) Tj ET
+BT /F1 8.5 Tf 0.150 0.150 0.150 rg 45.00 739.00 Td () Tj ET
+BT /F2 8.5 Tf 0.100 0.200 0.450 rg 45.00 727.50 Td (Verification via Source Diff \(extension.diff\):) Tj ET
+BT /F1 8.5 Tf 0.150 0.150 0.150 rg 45.00 716.00 Td (Running 'git diff BASE_COMMIT HEAD -- src' proves that the only Java changes in src/ are the new AsciiRenderer.java class) Tj ET
+BT /F1 8.5 Tf 0.150 0.150 0.150 rg 45.00 704.50 Td (and updates to Main.java to run demonstration checks T6 and T7. Existing contracts and classes remained completely untouched.) Tj ET
+BT /F1 8.5 Tf 0.150 0.150 0.150 rg 45.00 693.00 Td () Tj ET
+BT /F2 8.5 Tf 0.100 0.200 0.450 rg 45.00 681.50 Td (Runtime Switching Demonstration \(T5\):) Tj ET
+BT /F1 8.5 Tf 0.150 0.150 0.150 rg 45.00 670.00 Td (In test check T5, an existing Circle instance initialized with VectorRenderer is switched to RasterRenderer at runtime via) Tj ET
+BT /F1 8.5 Tf 0.150 0.150 0.150 rg 45.00 658.50 Td (circle.setImplementation\(new RasterRenderer\(\)\). Reference equality \(refBefore == refAfter\) evaluates to true, verifying that) Tj ET
+BT /F1 8.5 Tf 0.150 0.150 0.150 rg 45.00 647.00 Td (the abstraction object identity and its internal domain data \(id='C-05', radius=2.0\) are completely preserved while the rendering) Tj ET
+BT /F1 8.5 Tf 0.150 0.150 0.150 rg 45.00 635.50 Td (strategy is replaced dynamically.) Tj ET
+q 0.800 0.850 0.920 RG 0.80 w 0.920 0.940 0.980 rg 40.00 606.00 515.00 20.00 re B Q
+q 0.150 0.350 0.650 rg 40.00 606.00 4.00 20.00 re f Q
+BT /F2 11 Tf 0.100 0.200 0.450 rg 50.00 612.00 Td (5. Design Trade-Off of Bridge & Comparison with Adapter) Tj ET
+q 0.800 0.820 0.860 RG 0.80 w 0.980 0.980 0.990 rg 40.00 485.00 515.00 105.00 re B Q
+BT /F2 9.5 Tf 0.150 0.200 0.350 rg 52.00 575.00 Td (Architectural Trade-Off of the Bridge Pattern:) Tj ET
+BT /F1 8.2 Tf 0.200 0.200 0.200 rg 52.00 560.00 Td (- Increased Upfront Structural Complexity: Introduces additional interfaces and indirection. In scenarios where only) Tj ET
+BT /F1 8.2 Tf 0.200 0.200 0.200 rg 52.00 548.00 Td (  one implementation platform will ever exist, this introduces premature abstraction.) Tj ET
+BT /F1 8.2 Tf 0.200 0.200 0.200 rg 52.00 536.00 Td (- Minor Indirection Overhead: Each high-level call requires dynamic dispatch through the bridge reference. In modern JVMs,) Tj ET
+BT /F1 8.2 Tf 0.200 0.200 0.200 rg 52.00 524.00 Td (  monomorphic or bimorphic call sites are inlined by the JIT compiler, making runtime performance overhead negligible.) Tj ET
+BT /F2 9.5 Tf 0.150 0.200 0.350 rg 52.00 528.00 Td (Key Differences: Bridge vs Adapter Pattern:) Tj ET
+BT /F1 8.2 Tf 0.200 0.200 0.200 rg 52.00 513.00 Td (- Design Intent: Bridge is an UP-FRONT architectural pattern designed to let abstraction and implementation vary) Tj ET
+BT /F1 8.2 Tf 0.200 0.200 0.200 rg 52.00 501.00 Td (  independently before code is finalized. Adapter is a RETROSPECTIVE pattern used to make incompatible existing interfaces work together.) Tj ET
+BT /F1 8.2 Tf 0.200 0.200 0.200 rg 52.00 489.00 Td (- Structural Focus: Bridge connects two parallel class hierarchies via composition. Adapter wraps a single existing class/adaptee.) Tj ET
+q 0.800 0.850 0.920 RG 0.80 w 0.920 0.940 0.980 rg 40.00 436.00 515.00 20.00 re B Q
+q 0.150 0.350 0.650 rg 40.00 436.00 4.00 20.00 re f Q
+BT /F2 11 Tf 0.100 0.200 0.450 rg 50.00 442.00 Td (6. Demonstration Results \(T1-T7 Verification Table\)) Tj ET
+q 0.700 0.780 0.880 RG 1.00 w 0.880 0.920 0.980 rg 40.00 395.00 515.00 18.00 re B Q
+BT /F2 8.2 Tf 0.100 0.200 0.400 rg 48.00 401.00 Td (Test) Tj ET
+BT /F2 8.2 Tf 0.100 0.200 0.400 rg 80.00 401.00 Td (Setup / Target Action) Tj ET
+BT /F2 8.2 Tf 0.100 0.200 0.400 rg 240.00 401.00 Td (Evidence / Result Observed) Tj ET
+BT /F2 8.2 Tf 0.100 0.200 0.400 rg 485.00 401.00 Td (Status) Tj ET
+q 0.850 0.880 0.920 RG 0.50 w 1.000 1.000 1.000 rg 40.00 377.00 515.00 18.00 re B Q
+BT /F2 8 Tf 0.100 0.100 0.100 rg 48.00 382.00 Td (T1) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 80.00 382.00 Td (Circle with VectorRenderer) Tj ET
+BT /F3 7.8 Tf 0.100 0.250 0.450 rg 240.00 382.00 Td (VECTOR circle radius=2) Tj ET
+BT /F2 8 Tf 0.100 0.550 0.200 rg 485.00 382.00 Td (PASS) Tj ET
+q 0.850 0.880 0.920 RG 0.50 w 0.970 0.980 1.000 rg 40.00 359.00 515.00 18.00 re B Q
+BT /F2 8 Tf 0.100 0.100 0.100 rg 48.00 364.00 Td (T2) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 80.00 364.00 Td (Circle with RasterRenderer) Tj ET
+BT /F3 7.8 Tf 0.100 0.250 0.450 rg 240.00 364.00 Td (RASTER circle radius=2) Tj ET
+BT /F2 8 Tf 0.100 0.550 0.200 rg 485.00 364.00 Td (PASS) Tj ET
+q 0.850 0.880 0.920 RG 0.50 w 1.000 1.000 1.000 rg 40.00 341.00 515.00 18.00 re B Q
+BT /F2 8 Tf 0.100 0.100 0.100 rg 48.00 346.00 Td (T3) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 80.00 346.00 Td (Square with VectorRenderer) Tj ET
+BT /F3 7.8 Tf 0.100 0.250 0.450 rg 240.00 346.00 Td (VECTOR square side=3) Tj ET
+BT /F2 8 Tf 0.100 0.550 0.200 rg 485.00 346.00 Td (PASS) Tj ET
+q 0.850 0.880 0.920 RG 0.50 w 0.970 0.980 1.000 rg 40.00 323.00 515.00 18.00 re B Q
+BT /F2 8 Tf 0.100 0.100 0.100 rg 48.00 328.00 Td (T4) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 80.00 328.00 Td (Square with RasterRenderer) Tj ET
+BT /F3 7.8 Tf 0.100 0.250 0.450 rg 240.00 328.00 Td (RASTER square side=3) Tj ET
+BT /F2 8 Tf 0.100 0.550 0.200 rg 485.00 328.00 Td (PASS) Tj ET
+q 0.850 0.880 0.920 RG 0.50 w 1.000 1.000 1.000 rg 40.00 305.00 515.00 18.00 re B Q
+BT /F2 8 Tf 0.100 0.100 0.100 rg 48.00 310.00 Td (T5) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 80.00 310.00 Td (Runtime Switch \(Vector -> Raster\)) Tj ET
+BT /F3 7.8 Tf 0.100 0.250 0.450 rg 240.00 310.00 Td (sameObject=true, stateUnchanged=true) Tj ET
+BT /F2 8 Tf 0.100 0.550 0.200 rg 485.00 310.00 Td (PASS) Tj ET
+q 0.850 0.880 0.920 RG 0.50 w 0.970 0.980 1.000 rg 40.00 287.00 515.00 18.00 re B Q
+BT /F2 8 Tf 0.100 0.100 0.100 rg 48.00 292.00 Td (T6) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 80.00 292.00 Td (Circle with AsciiRenderer \(I3\)) Tj ET
+BT /F3 7.8 Tf 0.100 0.250 0.450 rg 240.00 292.00 Td (ASCII circle radius=2) Tj ET
+BT /F2 8 Tf 0.100 0.550 0.200 rg 485.00 292.00 Td (PASS) Tj ET
+q 0.850 0.880 0.920 RG 0.50 w 1.000 1.000 1.000 rg 40.00 269.00 515.00 18.00 re B Q
+BT /F2 8 Tf 0.100 0.100 0.100 rg 48.00 274.00 Td (T7) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 80.00 274.00 Td (Square with AsciiRenderer \(I3\)) Tj ET
+BT /F3 7.8 Tf 0.100 0.250 0.450 rg 240.00 274.00 Td (ASCII square side=3) Tj ET
+BT /F2 8 Tf 0.100 0.550 0.200 rg 485.00 274.00 Td (PASS) Tj ET
+BT /F2 8.5 Tf 0.100 0.550 0.200 rg 48.00 256.00 Td (Overall Test Summary: 7 / 7 Demonstration Checks PASSED \(100% Success Rate\)) Tj ET
+q 0.800 0.850 0.920 RG 0.80 w 0.920 0.940 0.980 rg 40.00 201.00 515.00 20.00 re B Q
+q 0.150 0.350 0.650 rg 40.00 201.00 4.00 20.00 re f Q
+BT /F2 11 Tf 0.100 0.200 0.450 rg 50.00 207.00 Td (7. References) Tj ET
+BT /F1 7.8 Tf 0.250 0.250 0.250 rg 45.00 175.00 Td (1. Gamma, E., Helm, R., Johnson, R., & Vlissides, J. \(1994\). Design Patterns: Elements of Reusable Object-Oriented Software. Addison-Wesley.) Tj ET
+BT /F1 7.8 Tf 0.250 0.250 0.250 rg 45.00 163.00 Td (2. Martin, R. C. \(2008\). Clean Code: A Handbook of Agile Software Craftsmanship. Prentice Hall.) Tj ET
+BT /F1 7.8 Tf 0.250 0.250 0.250 rg 45.00 151.00 Td (3. Bloch, J. \(2018\). Effective Java \(3rd ed.\). Addison-Wesley Professional.) Tj ET
+BT /F1 7.8 Tf 0.250 0.250 0.250 rg 45.00 139.00 Td (4. Bekenov, Y. \(2026\). Lecture 4: Bridge Pattern. Astana IT University, Course ShP-2216 Software Design Patterns.) Tj ET
+BT /F1 8.5 Tf 0.400 0.400 0.400 rg 40.00 32.00 Td (Astana IT University | ShP-2216 Software Design Patterns | Page 3 of 3) Tj ET
+BT /F1 8.5 Tf 0.400 0.400 0.400 rg 450.00 32.00 Td (Alibi Maksut \(SE-2301\)) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+10 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+11 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+12 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier-Bold >>
+endobj
+xref
+0 13
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000127 00000 n 
+0000000292 00000 n 
+0000000457 00000 n 
+0000000622 00000 n 
+0000009963 00000 n 
+0000019075 00000 n 
+0000027754 00000 n 
+0000027824 00000 n 
+0000027900 00000 n 
+0000027969 00000 n 
+trailer
+<< /Size 13 /Root 1 0 R >>
+startxref
+28043
+%%EOF
